@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Velodyne HDL-32E -->
+  <arg name="device_ip" default="127.0.0.1" />
+  <arg name="port" default="2368" />
+  <arg name="frame_id" default="velodyne" />
+  <arg name="model" default="32E" />
+
+  <!-- start nodelet manager and driver nodelets -->
+  <include file="$(find velodyne_driver)/launch/nodelet_mgr.launch">
+    <arg name="device_ip" value="$(arg device_ip)" />
+    <arg name="port" value="$(arg port)" />
+    <arg name="frame_id" value="$(arg frame_id)" />
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <!-- start cloud nodelet -->
+  <include file="$(find velodyne_pointcloud)/launch/cloud_nodelet.launch">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <!-- start dynamic obstacle detection -->
+  <node pkg="obstacle_detection" type="dy_obstacle_detection" name="dy_obstacle_detection" output="screen"/>
+
+</launch>

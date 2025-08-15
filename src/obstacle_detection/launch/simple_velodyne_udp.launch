@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Velodyne driver node for UDP connection -->
+  <node pkg="velodyne_driver" type="velodyne_node" name="velodyne_driver" output="screen">
+    <param name="device_ip" value="127.0.0.1" />
+    <param name="port" value="2368" />
+    <param name="frame_id" value="velodyne" />
+    <param name="model" value="32E" />
+  </node>
+
+  <!-- Use the standard 32e_points launch for pointcloud conversion -->
+  <include file="$(find velodyne_pointcloud)/launch/32e_points.launch">
+    <arg name="device_ip" value="127.0.0.1"/>
+  </include>
+
+  <!-- Dynamic obstacle detection -->
+  <node pkg="obstacle_detection" type="dy_obstacle_detection" name="dy_obstacle_detection" output="screen"/>
+
+</launch>

@@ -1,0 +1,2 @@
+MORAI-ROS_morai_msgs:lane_detection:obstacle_detection:path_maker:pure_pursuit:traffic_sign
+-DCATKIN_DEVEL_PREFIX=/home/jhj/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jhj/catkin_ws/install -G Unix Makefiles

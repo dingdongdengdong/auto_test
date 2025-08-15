@@ -1,0 +1,22 @@
+\subsubsection usage Usage
+\verbatim
+<node name="obstacle_detection" pkg="obstacle_detection" type="obstacle_detection">
+  <param name="minPoints" type="int" value="20" />
+  <param name="epsilon" type="double" value="0.2" />
+  <param name="minClusterSize" type="int" value="10" />
+  <param name="maxClusterSize" type="double" value="1000000.0" />
+  <param name="xMinROI" type="double" value="0.0" />
+  <param name="xMaxROI" type="double" value="15.0" />
+  <param name="yMinROI" type="double" value="-3.0" />
+  <param name="yMaxROI" type="double" value="3.0" />
+  <param name="zMinROI" type="double" value="-0.5" />
+  <param name="zMaxROI" type="double" value="0.5" />
+  <param name="xMinBoundingBox" type="double" value="0.01" />
+  <param name="xMaxBoundingBox" type="double" value="1.5" />
+  <param name="yMinBoundingBox" type="double" value="0.01" />
+  <param name="yMaxBoundingBox" type="double" value="1.5" />
+  <param name="zMinBoundingBox" type="double" value="0.03" />
+  <param name="zMaxBoundingBox" type="double" value="2.0" />
+</node>
+\endverbatim
+

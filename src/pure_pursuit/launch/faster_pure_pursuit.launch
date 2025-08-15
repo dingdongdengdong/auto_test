@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- Optional: publish yaw from IMU as /yaw (not required for faster mode) -->
+    <!-- <node pkg="pure_pursuit" type="get_yaw_from_imu.py" name="get_yaw_from_imu"/> -->
+
+    <!-- Main controller (fast configuration). Publishes /ctrl_cmd and /global_path -->
+    <node pkg="pure_pursuit" type="faster_pure_pursuit.py" name="pure_pursuit" output="screen"/>
+
+    <!-- Optional: score collision events and mission logs to file -->
+    <!-- <node pkg="pure_pursuit" type="scoring.py" name="scoring" output="screen"/> -->
+
+    <!-- Perception: traffic sign/light detection. Publishes /traffic_light (counts) -->
+    <include file="$(find traffic_sign)/launch/traffic_sign.launch" />
+    <!-- Perception: lane detection (fast). Publishes /cam_steer for camera steering assist -->
+    <include file="$(find lane_detection)/launch/lane_detection_faster.launch" />
+    <!-- Perception: curve detection (fast). Publishes /curve_cmd overrides for right-angle course -->
+    <include file="$(find lane_detection)/launch/curve_detection_faster.launch" />
+    <!-- Perception: dynamic obstacle detection. Publishes /dy_obs_info for obstacle missions -->
+    <include file="$(find obstacle_detection)/launch/dy_obstacle_detection.launch" />
+</launch>

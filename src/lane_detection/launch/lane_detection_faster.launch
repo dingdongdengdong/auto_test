@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- lane_detection 패키지의 빠른 차선 인식 노드 실행 -->
+    <!-- type: 실행 스크립트, name: 노드 이름, output: 로그 출력 대상으로 'screen' -->
+    <node pkg="lane_detection" type="line_detector_faster.py" name="line_detector" output = 'screen'/>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/jhj/catkin_ws/install
+
+Name: traffic_sign
+Description: Description of traffic_sign
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
