@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- Simple Pure Pursuit for L-path testing -->
+    <node pkg="pure_pursuit" type="simple_pure_pursuit.py" name="simple_pure_pursuit" output="screen"/>
+    
+    <!-- IMU yaw calculation if needed -->
+    <!-- <node pkg="pure_pursuit" type="get_yaw_from_imu.py" name="get_yaw_from_imu"/> -->
+</launch>

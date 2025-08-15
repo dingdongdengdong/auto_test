@@ -6,7 +6,7 @@
 	<!-- <node pkg="path_maker" type="path_maker_utmk.py" name="maker" args="path parking_3" output="screen" /> -->
 	<!-- <node pkg="path_maker" type="path_maker_utmk.py" name="maker" args="path parking_4" output="screen" /> -->
 	<!-- <node pkg="path_maker" type="path_maker_utmk.py" name="maker" args="path second" output="screen" /> -->
-	<node pkg="path_maker" type="path_maker_utmk.py" name="maker" args="path simple_L_course" output="screen" />
+	<node pkg="path_maker" type="path_maker_utmk.py" name="maker" args="path first_L_path" output="screen" />
 	<!-- <node pkg="path_maker" type="path_maker_utmk.py" name="maker" args="path test_path_second" output="screen" /> -->
 	<!-- <node pkg="path_maker" type="path_maker_utmk.py" name="maker" args="path final_path_second" output="screen" /> -->
 </launch>
